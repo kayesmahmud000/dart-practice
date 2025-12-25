@@ -1,4 +1,6 @@
- class Logger {
+ import 'dart:math';
+
+class Logger {
   final String name;
   String massage;
 
@@ -15,6 +17,11 @@
       return Logger(name, massage);
     }
   }
+
+  @override
+  String toString(){
+    return " Name : $name , Message : $massage ";
+  }
  }
 
  class DefaultLogger extends Logger {
@@ -23,8 +30,9 @@
 
 
  void main(){
-  var json = {'namess': 'log1', 'massage':'message'};
+  var json = {'name': 'log1', 'massage':'message'};
 
   Logger logger = Logger.fromJson(json);
   print(logger.toString());
+  print(logger.name);
  }
