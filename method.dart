@@ -15,7 +15,77 @@ class Vector{
   
 }
 
+
+// Example :1
+abstract class Animal {
+  void sound();
+}
+
+class Dog extends Animal {
+  
+  @override
+  void sound(){
+    print("Dog sound");
+  }
+}
+
+// Example :2
+abstract class Shape{
+  void area();
+
+  void info(){
+    print('This is a shape ');
+  }
+}
+
+class Circle extends Shape {
+  double radius ;
+
+  Circle( this.radius);
+  
+  @override
+  void area(){
+    print(3.14*radius* radius);
+  }
+
+
+}
+
+// Example :3
+
+abstract class PaymentMethod{
+  void pay(double amount);
+}
+
+class Bkash extends PaymentMethod{
+  @override
+ void pay(double amount){
+  print('Total Bkash Pay Amount : $amount');
+ }
+} 
+
+class Card extends PaymentMethod{
+  @override
+  void pay(double amount){
+    print('Total Card pay amount : $amount');
+  }
+}
 void main(){
+
+  Dog d =Dog();
+  d.sound();
+
+  Circle c =Circle(3);
+  c.area();
+
+  Bkash b= Bkash();
+  b.pay(300);
+
+  Card cr= Card();
+  cr.pay(400);
+  // print(sound);
+
+
   // final v= Vector(2,3);
   // final w= Vector(2,2);
   // assert(v+w== Vector(4,5));
@@ -30,9 +100,9 @@ void main(){
   // rct.right = 10;
   // print(rct.right);
   // print(rct.left);
-  var p = Person("minhaz", 15);
-  p.age = 10;
-  print(p._age);
+  // var p = Person("minhaz", 15);
+  // p.age = 10;
+  // print(p._age);
 }
 
 class A{
