@@ -19,11 +19,21 @@ void tuneInstrument(){
 }
 }
 
+
+class WannabeFunction{
+  String call(String a, String b, String c)=> '$a $b $c';
+}
+
+
 void main(){
   PunKRocker().tuneInstrument();
 
   var str ="456";
   var sum = str.parseInt();
   print(sum);
+var wf =WannabeFunction();
+var out =wf('Hi', 'there', 'gang');
+
+  print(out);
 }
 
