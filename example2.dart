@@ -73,30 +73,48 @@ class Student{
   }
 }
 
-class Teacher{
-  String? name ;
-  int? age;
-  String? subject;
-  double? salary;
+// class Teacher{
+//   String? name ;
+//   int? age;
+//   String? subject;
+//   double? salary;
 
-  Teacher(String name, int age, String subject, double salary){
-    this.name=name;
-    this.age=age;
-    this.subject=subject;
-    this.salary= salary;
-  }
+//   Teacher(String name, int age, String subject, double salary){
+//     this.name=name;
+//     this.age=age;
+//     this.subject=subject;
+//     this.salary= salary;
+//   }
 
-  void display(){
-    print("Name: ${name}");
-    print("Age: ${age}");
-    print("Subject: ${subject}");
-    print("Salary: ${salary}\n");
-  }
+//   void display(){
+//     print("Name: ${name}");
+//     print("Age: ${age}");
+//     print("Subject: ${subject}");
+//     print("Salary: ${salary}\n");
+//   }
+// }
+//  void main (){
+// Teacher teacher1 =Teacher('Jone Due', 37, 'Math', 40000);
+// Teacher teacher2 = Teacher('Maicel', 35, 'Physic', 35000);
+
+// teacher2.display();
+// teacher1.display();
+//  }
+
+
+class Patient {
+String name; 
+int age;
+String disease;
+
+  Patient(this.name, this.age, this.disease);
 }
- void main (){
-Teacher teacher1 =Teacher('Jone Due', 37, 'Math', 40000);
-Teacher teacher2 = Teacher('Maicel', 35, 'Physic', 35000);
 
-teacher2.display();
-teacher1.display();
- }
+void main(){
+   Patient patient = Patient("Rahim", 30, "Diabetes");
+
+  // Print properties
+  print("Name: ${patient.name}");
+  print("Age: ${patient.age}");
+  print("Disease: ${patient.disease}");
+}
