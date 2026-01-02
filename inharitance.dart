@@ -27,3 +27,22 @@ class Specialist extends Doctor {
     print("Specialization: ${specialization}");
   }
 }
+
+
+class Shape {
+ double? diameter1;
+ double? diameter2;
+}
+
+class Rectangle extends Shape{
+  double area(){
+    return diameter1!* diameter2!;
+  }
+}
+
+class Triangle extends Shape{
+  double area(){
+    return 0.5 *diameter1!* diameter2!;
+  }
+}
+
