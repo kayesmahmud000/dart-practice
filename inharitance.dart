@@ -46,3 +46,20 @@ class Triangle extends Shape{
   }
 }
 
+class Person1 {
+  String? name;
+  int? age;
+  Person1(this.name, this.age);
+}
+
+class Student1 extends Person1{
+  int? roll;
+  Student1(String name , int age,  this.roll): super(name, age);
+}
+
+void main(){
+  Student1 s =Student1("John", 23, 2);
+  print('Name: ${s.name}');
+  print('Age: ${s.age}'); 
+  print('Roll: ${s.roll}');
+}
