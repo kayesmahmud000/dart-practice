@@ -25,15 +25,57 @@ class WannabeFunction{
 }
 
 
-void main(){
-  PunKRocker().tuneInstrument();
-
-  var str ="456";
-  var sum = str.parseInt();
-  print(sum);
-var wf =WannabeFunction();
-var out =wf('Hi', 'there', 'gang');
-
-  print(out);
+mixin CanFly{
+  void fly(){
+    print('I can fly');
+  }
+  
 }
 
+mixin CanWalk{
+  void walk(){
+    print('I can walk');
+  }
+}
+
+class Bird with CanFly, CanWalk{
+}
+
+class Human with CanWalk{
+
+}
+// void main(){
+
+// Bird bird =Bird();
+// bird.fly();
+// bird.walk();
+// Human human =Human();
+// human.walk();
+// }
+
+
+
+
+abstract class Animal{
+  String name;
+  double speed;
+
+  Animal(this.name, this.speed);
+  void run();
+}
+
+mixin canRun on Animal{
+  void run (){
+    print("$name can Running at speed $speed");
+  }
+}
+
+class Dog extends Animal with canRun{
+  Dog(String name, double speed): super(name, speed);
+}
+
+void main(){
+ Dog dog = Dog("Bool Dog", 40);
+
+ dog.run();
+}
